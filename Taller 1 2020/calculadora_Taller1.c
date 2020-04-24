@@ -27,12 +27,6 @@ int restar(float* minu, float subs){
 }
 
 int multiplicar(unsigned int op1, unsigned int op2, unsigned int* res){
-    /* Llenar con su código SIN usar op1*op2
-     * En lugar de eso, utilice la función sumar()
-     * para sumar op1 a si mismo op2 veces
-     */
-    
-    
     if(!res) return -1;
     
     *res = 0;
@@ -61,7 +55,9 @@ int initArray (int array[], unsigned int size, unsigned int limit){
      * https://www.cplusplus.com/reference/cstdlib/rand/
      */
     
-    
+    for (int i = 0; i < size; i++) {
+        array[i] = rand() % limit;
+    }
     
     return 0;
 }
